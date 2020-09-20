@@ -1,9 +1,12 @@
 import React from 'react'
+import './Expense.css'
 
-export default function Expense({ expense }) {
+
+export default function Expense({ expense, removeExpense }) {
   return (
-    <div>
+    <div className="expense">
       {`name: ${expense.name}, amount: ${expense.amount}`}
+      <button onClick={() => removeExpense(expense.id)}>Remove</button>
     </div>
   )
 }
