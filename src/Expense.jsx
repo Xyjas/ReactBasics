@@ -7,8 +7,8 @@ export default function Expense({ expense, removeExpense }) {
   return (
     <div className="expense">
       {`name: ${expense.name}, amount: ${expense.amount}`}
-      <button onClick={() => removeExpense(expense.id)}>Remove</button>
-      <button onClick={() => history.push(`/expense/${expense.id}`)}>
+      <button onClick={() => removeExpense(expense._id)}>Remove</button>
+      <button onClick={() => history.push(`/expense/${expense._id}`)}>
         Details
       </button>
     </div>
